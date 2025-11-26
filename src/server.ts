@@ -44,13 +44,13 @@ const server: Server = http.createServer(
       });
 
       req.on("end", () => {
-       try{
-         const parseBody = JSON.parse(body);
-        console.log(parseBody);
-        res.end(JSON.stringify(parseBody));
-       }catch(err : any){
-        console.log(err?.message);
-       }
+        try {
+          const parseBody = JSON.parse(body);
+          console.log(parseBody);
+          res.end(JSON.stringify(parseBody));
+        } catch (err: any) {
+          console.log(err?.message);
+        }
       });
     }
   }
